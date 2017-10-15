@@ -36,3 +36,10 @@ ul.dropdown-lr {
     border-width: 1px;
     border-color: rgba(0,0,0,0.6);
 }
+.logo {
+    height: 50px;
+    background-image: url("../img/logo.png");
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    margin-left: -10%;
+}

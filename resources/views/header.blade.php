@@ -9,6 +9,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="">ElecLockers</a>
+            <div class="logo"></div>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
@@ -19,11 +20,12 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
-                    <a href="http://phpoll.com/register" class="dropdown-toggle" data-toggle="dropdown">Register <span class="caret"></span></a>
+                    <a class="dropdown-toggle" data-toggle="dropdown">Register <span class="caret"></span></a>
                     <ul class="dropdown-menu dropdown-lr animated flipInX" role="menu">
                         <div class="col-lg-12">
                             <div class="text-center"><h3><b>Register</b></h3></div>
-                            <form id="ajax-register-form" action="http://phpoll.com/register/process" method="post" role="form" autocomplete="off">
+                            <form action="/registrado" method="post">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <div class="form-group">
                                     <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
                                 </div>
@@ -34,17 +36,24 @@
                                     <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
+                                    <input type="password" name="confirmpass" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
                                 </div>
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-xs-6 col-xs-offset-3">
-                                            <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-info" value="Register Now">
+                                            <input type="submit" id="register-submit" tabindex="4" class="form-control btn btn-info" value="Register Now">
                                         </div>
                                     </div>
-                                </div>
-                                <input type="hidden" class="hide" name="token" id="token" value="7c6f19960d63f53fcd05c3e0cbc434c0">
                             </form>
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
                         </div>
                     </ul>
                 </li>
