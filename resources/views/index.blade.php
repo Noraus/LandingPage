@@ -1,0 +1,16 @@
+<html>
+<head>
+    @extends('head')
+</head>
+<body>
+<header>
+    @extends('header')
+</header>
+<section>
+    @extends('section')
+</section>
+<footer>
+    @extends('footer')
+</footer>
+</body>
+</html>
