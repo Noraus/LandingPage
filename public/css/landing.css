@@ -43,3 +43,10 @@ ul.dropdown-lr {
     background-repeat: no-repeat;
     margin-left: -10%;
 }
+.icon-block a {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.icon-block{
+    margin-top: 25px;
+}
