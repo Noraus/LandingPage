@@ -8,12 +8,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="">ElecLockers</a>
+            <a class="navbar-brand" href="/">ElecLockers</a>
             <div class="logo"></div>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="">Home</a></li>
+                <li class="active"><a href="/">Home</a></li>
                 <li><a href="">Servicios</a></li>
                 <li><a href="">Sobre nosotros</a></li>
                 <li><a href="">Contacto</a></li>
